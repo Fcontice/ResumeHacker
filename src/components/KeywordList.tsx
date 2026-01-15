@@ -4,17 +4,6 @@ interface KeywordListProps {
   keywords: KeywordGap[]
 }
 
-const statusStyles = {
-  missing: {
-    badge: 'bg-red-100 text-red-800 border-red-200',
-    label: 'Missing',
-  },
-  weak: {
-    badge: 'bg-amber-100 text-amber-800 border-amber-200',
-    label: 'Weak',
-  },
-}
-
 export function KeywordList({ keywords }: KeywordListProps) {
   if (keywords.length === 0) {
     return null

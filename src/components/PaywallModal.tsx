@@ -30,7 +30,7 @@ export function PaywallModal({ isOpen, onClose }: PaywallModalProps) {
             onClick={onClose}
             className="w-full px-4 py-2 text-gray-600 text-sm hover:text-gray-900 transition-colors"
           >
-            No thanks, I'm good
+            No thanks, I&apos;m good
           </button>
         </div>
 

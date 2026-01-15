@@ -140,7 +140,7 @@ export async function evaluateResume(
   let content: string
   try {
     content = await callLLM(prompt)
-  } catch (error) {
+  } catch {
     // If LLM call fails, return fallback
     console.error('LLM call failed on first attempt')
     return FALLBACK_RESULT
@@ -155,7 +155,7 @@ export async function evaluateResume(
     try {
       content = await callLLM(prompt)
       result = parseAndValidateResponse(content)
-    } catch (error) {
+    } catch {
       console.error('LLM call failed on retry')
       return FALLBACK_RESULT
     }
